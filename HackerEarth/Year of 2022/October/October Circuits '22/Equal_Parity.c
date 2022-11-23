@@ -14,10 +14,10 @@
 // Driver Function:
 int main (int argc, const char** argv)
 {
-	int64_t T, N;
-	scanf("%lld", &T);
+    int64_t T, N;
+    scanf("%lld", &T);
 	
-	int64_t EvenCounter = 0, OddCounter = 0;
+    int64_t EvenCounter = 0, OddCounter = 0;
     while (T--)
     {
         scanf("%lld", &N);
