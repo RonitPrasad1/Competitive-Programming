@@ -90,6 +90,7 @@ auto main (int argc, const char** argv) -> decltype (0)
             }
             
             NonDuplicateElementsIndex = StoredDifferences[NonDuplicateElement];
+			
             std::cout << (NonDuplicateElementsIndex * 2) << '\n';     
 	    }
 	    else if (n % 2 != 0)
@@ -132,10 +133,8 @@ auto main (int argc, const char** argv) -> decltype (0)
             }
             
             NonDuplicateElementsIndex = StoredDifferences[NonDuplicateElement];
+			
             //std::cout << (NonDuplicateElementsIndex * 2) << '\n';
-            
-            
-            
 	    }
 
 	    //std::cout << '\n';
