@@ -1,0 +1,49 @@
+//Attempt; 0 points
+
+#include <iostream>
+#include <array>
+#include <cstring>
+ 
+constexpr static int64_t MAX = 1001;
+constexpr static int64_t MOD = 1e9 + 7;
+ 
+static int64_t DP[MAX][MAX];
+ 
+template <typename DataType>
+inline auto CountingWays (DataType M, DataType N) -> int64_t;
+ 
+// Driver Code
+auto main (int argc, const char** argv) -> decltype (0)
+{
+    int64_t Q, N, M, K;
+    std::cin >> Q;
+ 
+    while (Q--)
+    {
+        std::cin >> N >> M >> K;
+        
+        //Allocating all values to -1:
+        std::memset(DP, -1, sizeof(DP));
+        
+        std::cout << CountingWays(N, M) << '\n';
+    }
+    
+    return 0;
+}
+ 
+template <typename DataType>
+inline auto CountingWays (DataType M, DataType N) -> int64_t
+{
+    if (N == 1 || M == 1)
+    {
+        return 1;
+    }
+    
+    if (DP[M][N] != -1) 
+    {
+        return (DP[M % MOD][N % MOD] % MOD);
+    }
+    
+    //Down, Right, Diagonal:   
+    return (DP[M][N] = (CountingWays(M - 1, N) % MOD + CountingWays(M, N - 1) % MOD + CountingWays(M - 1, N - 1) % MOD) % MOD);
+}
