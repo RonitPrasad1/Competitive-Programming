@@ -1,4 +1,4 @@
-//10 pts Chip for 200 round off
+//10 pts Chip for 200 pts
 
 /*
     Competition: HackerEarth
