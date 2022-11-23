@@ -30,7 +30,7 @@ auto main (int argc, const char** argv) -> decltype (0)
     // Sort Array:
     std::sort (LexicographicSmallestArray, LexicographicSmallestArray + n);
     
-    // Print:
+    // Print Solution:
     for (int64_t i = 0; i < n; ++i)
     {
         std::cout << LexicographicSmallestArray[i] << " ";
