@@ -41,6 +41,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 		    std::cout << (2 * (n * n) - 1) << '\n';
 		}
 		
+		// Clear Memory:
 		delete[] MinimumCost;
 	}
 
