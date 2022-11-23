@@ -88,8 +88,6 @@ int main (int argc, const char** argv)
         {
             printf("\nNO");
         }
-        
-        //What did I miss?
     }
 
     return 0;
