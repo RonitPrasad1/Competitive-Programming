@@ -32,6 +32,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 		    std::cin >> MinimumCost[i];
 		}
 		
+		// Cases:
 		if (n == n)
 		{
 		    std::cout << (n * n) << '\n';
