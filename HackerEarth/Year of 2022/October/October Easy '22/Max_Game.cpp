@@ -40,7 +40,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 		
         std::cout << Store[0] << '\n';
 		
-		//Clear Memory:
+		// Clear Memory:
 		Store.clear();
 	}
     
