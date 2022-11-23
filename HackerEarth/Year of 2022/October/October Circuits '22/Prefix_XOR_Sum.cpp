@@ -19,7 +19,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 {
     // FAST IO:
 	std::ios::sync_with_stdio (false);
-	std::cin.tie (static_cast <std::ostream*> (0));
+	std::cin.tie (static_cast <std::ostream*>(0));
 
 	int64_t N, Q, L, R;
 	scanf("%lld %lld", &N, &Q);
