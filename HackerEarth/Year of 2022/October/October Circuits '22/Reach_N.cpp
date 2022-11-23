@@ -38,6 +38,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 		
 		std::cout << Sum << '\n';
 		
+		// Clear Memory:
 		delete[] MinimumCost;
 	}
 
