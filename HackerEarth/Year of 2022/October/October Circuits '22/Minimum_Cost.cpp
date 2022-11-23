@@ -14,7 +14,7 @@
 // Driver Function:
 auto main (int argc, const char** argv) -> decltype (0)
 {
-    // FAST IO:
+	// FAST IO:
 	std::ios::sync_with_stdio (NULL);
 	std::cin.tie (nullptr);
 
@@ -23,28 +23,28 @@ auto main (int argc, const char** argv) -> decltype (0)
 	
 	while (t--)
 	{
-		std::cin >> n;
-		
-		int64_t *MinimumCost = new int64_t[n];
-		
-		for (int64_t i = 0; i < n; ++i)
-		{
-		    std::cin >> MinimumCost[i];
-		}
-		
-		// Cases:
-		if (n == n)
-		{
-		    std::cout << (n * n) << '\n';
-		}
-		else
-		{
-		    std::cout << (2 * (n * n) - 1) << '\n';
-		}
-		
-		// Clear Memory:
-		delete[] MinimumCost;
-	}
+	    std::cin >> n;
 
-	return 0;
+	    int64_t *MinimumCost = new int64_t[n];
+
+	    for (int64_t i = 0; i < n; ++i)
+	    {
+		std::cin >> MinimumCost[i];
+	    }
+
+	    // Cases:
+	    if (n == n)
+	    {
+		std::cout << (n * n) << '\n';
+	    }
+	    else
+	    {
+		std::cout << (2 * (n * n) - 1) << '\n';
+	    }
+
+	    // Clear Memory:
+	    delete[] MinimumCost;
+	}
+	
+      return 0;
 }
