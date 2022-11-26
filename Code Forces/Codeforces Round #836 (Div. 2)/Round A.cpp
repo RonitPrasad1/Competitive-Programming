@@ -1,3 +1,5 @@
+//Accepted!
+
 /*
     Competition: Codeforces Round #836 (Div. 2)
     Problem: "A: SSeeeeiinngg DDoouubbllee"
