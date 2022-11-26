@@ -56,8 +56,7 @@ auto main (int argc, const char** argv) -> decltype (0)
     		//}
     		
     		int64_t ReverseValue = (*Advantage.rbegin());
-    		// std::cout << ReverseValue << " ";
-    		
+			
 		    std::cout << (Strength[i] - ReverseValue) << " ";
 			
 		    Advantage.insert(Strength[i]);
