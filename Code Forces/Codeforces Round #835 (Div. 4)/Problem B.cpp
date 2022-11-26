@@ -24,9 +24,9 @@ auto main (int argc, const char** argv) -> decltype (0)
 	std::cin >> t;
 	
 	std::map <int64_t, char> AFP;
-	AFP =      {{1, 'a'}, 
-		      {2, 'b'},
-		      {3, 'c'},
+	AFP =   {{1, 'a'}, 
+		    {2, 'b'},
+		    {3, 'c'},
 		   	{4, 'd'},
 		   	{5, 'e'},
 		   	{6, 'f'},
@@ -36,7 +36,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 		   	{10, 'j'},
 		   	{11, 'k'},
 		   	{12, 'l'},
-		      {13, 'm'},
+		    {13, 'm'},
 		   	{14, 'n'},
 		   	{15, 'o'},
 		   	{16, 'p'},
@@ -49,9 +49,9 @@ auto main (int argc, const char** argv) -> decltype (0)
 		   	{23, 'w'},
 		   	{24, 'x'},
 		   	{25, 'y'},
-		      {26, 'z'}};
+		    {26, 'z'}};
 
-      std::vector <int64_t> StoredValues;
+    std::vector <int64_t> StoredValues;
 	while (t--)
 	{
 		std::cin >> n;
