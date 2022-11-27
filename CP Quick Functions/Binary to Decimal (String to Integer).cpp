@@ -9,8 +9,10 @@ constexpr static int64_t MOD = (int64_t)(1e9 + 7);
 // Driver Function:
 auto main (int argc, const char** argv) -> decltype (0)
 {
-    std::ios_base::sync_with_stdio(NULL);
-    std::cin.tie(nullptr);
+    // FAST IO:
+    std::ios::sync_with_stdio (NULL);
+    std::cin.tie (nullptr);
+    std::cout.tie (NULL);
     
     std::string a = "01010010101", b = "0101010101011101010";
     std::cout << "Value (A) in Decimal is: " << binaryToDecimal(a) << '\n';
