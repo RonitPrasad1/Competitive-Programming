@@ -13,8 +13,10 @@ inline auto AND (DataType x, DataType y) -> int64_t;
 // Driver Function:
 auto main (int argc, const char** argv) -> decltype (0)
 {
-    std::ios_base::sync_with_stdio(NULL);
-    std::cin.tie(nullptr);
+    // FAST IO:
+    std::ios::sync_with_stdio (NULL);
+    std::cin.tie (nullptr);
+    std::cout.tie (NULL);
     
     int64_t a = 15, b = 20;
     
