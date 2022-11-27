@@ -13,9 +13,9 @@ auto main (int argc, const char** argv) -> decltype (0)
     std::cout.tie (NULL);
     
     /* 651 in Binary = 00000000000000000000001010001011 [22 Trailing Zeros] */
-    int64_t Binary = 651; 
+    int64_t DecimalNumber = 651; 
     
-    std::cout << TrailingZeros(Binary) << '\n';
+    std::cout << TrailingZeros(DecimalNumber) << '\n';
     
     return 0;
 }
