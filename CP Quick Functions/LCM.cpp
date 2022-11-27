@@ -25,7 +25,7 @@ auto main (int argc, const char** argv) -> decltype (0)
 template <typename DataType>
 inline auto LCM (DataType x, DataType y) -> int64_t
 {
-    return static_cast <int64_t> (std::abs(((x * y) / GCD(x, y))));
+    return static_cast <int64_t> (std::ceil(((x * y) / GCD(x, y))));
 }
 
 template <typename DataType>
