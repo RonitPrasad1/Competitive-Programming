@@ -12,18 +12,25 @@ inline auto GCD (DataType x, DataType y) -> int64_t;
 // Driver Function:
 auto main (int argc, const char** argv) -> decltype (0)
 {
-    std::ios_base::sync_with_stdio(NULL);
-    std::cin.tie(nullptr);
+    // FAST IO:
+    std::ios::sync_with_stdio (NULL);
+    std::cin.tie (nullptr);
+    std::cout.tie (NULL);
     
-    int64_t a = 20, b = 15;
+    std::cout << "Enter the numbers for (a) and (b): " << '\n';
     
-    if (LCM(a, b) == -1)
+    int64_t a, b;
+    std::cin >> a >> b;
+    
+    if (LCM(a, b) != -1)
     {
-        std::cout << "Cannot use these numbers, retry!" << '\n';
+        std::cout << LCM(a, b) << '\n';
+        
+        std::exit(0);
     }
     else
     {
-        std::cout << LCM(a, b) << '\n';
+        std::cout << "Cannot use these numbers, retry!" << '\n';
     }
     
     return 0;
