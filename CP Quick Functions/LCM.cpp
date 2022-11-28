@@ -41,7 +41,7 @@ inline auto LCM (DataType x, DataType y) -> int64_t
 {
     if ((x != 0) && (y != 0))
     {
-        return (static_cast <int64_t> (std::ceil(((x * y) / GCD(x, y)))));
+        return (static_cast <int64_t> (((x * y) / GCD(x, y))));
     }
     
     return -1;
