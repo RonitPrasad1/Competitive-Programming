@@ -15,9 +15,16 @@ auto main (int argc, const char** argv) -> decltype (0)
     std::ios_base::sync_with_stdio(NULL);
     std::cin.tie(nullptr);
     
-    int64_t a = 15, b = 20;
+    int64_t a = 20, b = 15;
     
-    std::cout << LCM(a, b) << '\n';
+    if (LCM(a, b) == -1)
+    {
+        std::cout << "Cannot use these numbers, retry!" << '\n';
+    }
+    else
+    {
+        std::cout << LCM(a, b) << '\n';
+    }
     
     return 0;
 }
@@ -25,7 +32,12 @@ auto main (int argc, const char** argv) -> decltype (0)
 template <typename DataType>
 inline auto LCM (DataType x, DataType y) -> int64_t
 {
-    return static_cast <int64_t> (std::ceil(((x * y) / GCD(x, y))));
+    if ((x != 0) && (y != 0))
+    {
+        return (static_cast <int64_t> (std::ceil(((x * y) / GCD(x, y)))));
+    }
+    
+    return -1;
 }
 
 template <typename DataType>
