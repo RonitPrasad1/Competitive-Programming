@@ -63,7 +63,8 @@ inline auto GCD (DataType x, DataType y) -> int64_t
  
   do 
   {
-      int64_t Move;
+      int64_t Move = 0;
+      
       y >>= __builtin_ctz(y);
       y -= x;
       Move = ((int64_t) y >> 31);
