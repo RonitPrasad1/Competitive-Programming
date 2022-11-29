@@ -50,13 +50,17 @@ inline auto LCM (DataType x, DataType y) -> int64_t
 template <typename DataType>
 inline auto GCD (DataType x, DataType y) -> int64_t
 {
-    int64_t Shift;
+    int64_t Shift = 0;
     
     if (x == 0)
+    {
         return y;
+    }
     
     if (y == 0)
+    {
         return x;
+    }
     
     Shift = __builtin_ctz(x | y);
     x >>= __builtin_ctz(x);
