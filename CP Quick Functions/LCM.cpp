@@ -2,12 +2,16 @@
 
 // Header Files:
 #include <iostream>
+#include <string>
 
 template <typename DataType>
-inline auto LCM (DataType x, DataType y) -> int64_t;
+inline auto LCM (DataType x, DataType y) -> std::string;
 
 template <typename DataType>
 inline auto GCD (DataType x, DataType y) -> int64_t;
+
+template <typename DataType>
+inline auto RussianPeasantAlgo (DataType x, DataType y) -> int64_t;
 
 // Driver Function:
 auto main (int argc, const char** argv) -> decltype (0)
@@ -22,29 +26,19 @@ auto main (int argc, const char** argv) -> decltype (0)
     int64_t a, b;
     std::cin >> a >> b;
     
-    if (LCM(a, b) != -1)
-    {
-        std::cout << LCM(a, b) << '\n';
-        
-        std::exit(0);
-    }
-    else
-    {
-        std::cout << "Cannot use these numbers, retry!" << '\n';
-    }
+    std::cout << LCM(a, b) << '\n';
     
     return 0;
 }
 
 template <typename DataType>
-inline auto LCM (DataType x, DataType y) -> int64_t
+inline auto LCM (DataType x, DataType y) -> std::string
 {
-    if ((x != 0) && (y != 0))
-    {
-        return (static_cast <int64_t> (((x * y) / GCD(x, y))));
-    }
+    std::string largeNumber = " "; 
     
-    return -1;
+    largeNumber = (std::to_string(((RussianPeasantAlgo(x, y) / GCD(x, y)))));
+        
+    return largeNumber;
 }
 
 template <typename DataType>
@@ -78,4 +72,20 @@ inline auto GCD (DataType x, DataType y) -> int64_t
   } while (y != 0);
   
   return (x << Shift);
+}
+
+template <typename DataType>
+inline auto RussianPeasantAlgo (DataType x, DataType y) -> int64_t
+{
+    int64_t Result = 0;
+    while (y > 0)
+    {
+        if (y & 1)
+            Result += x;
+            
+        x <<= 1;
+        y >>= 1;
+    }
+    
+    return Result;
 }
