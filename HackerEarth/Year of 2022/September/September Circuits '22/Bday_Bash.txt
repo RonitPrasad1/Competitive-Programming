@@ -1,0 +1,65 @@
+//40 Points
+
+/*
+    Competition: HackerEarth
+    Problem: Birthday Bash
+    Author: Ron Prasad
+    Date: 09/18/2022
+*/
+
+#include <iostream>
+#include <string>
+
+constexpr static int64_t TotalAlphabets = 26;
+
+//Driver Function:
+auto main (int argc, const char** argv) -> decltype (0)
+{
+	std::ios::sync_with_stdio (NULL);
+	std::cin.tie (nullptr);
+
+	int64_t t, n, Queries;
+	std::cin >> t;
+    
+    std::string Bdaybash = "  ";
+	while (t--)
+	{
+		std::cin >> n >> Queries;
+		
+        std::cin >> Bdaybash;
+        
+		int64_t QueryNumber, ChosenIndex, SwapValue = 0;
+		for (int64_t i = 1; i <= Queries; ++i)
+		{
+		    std::cin >> QueryNumber >> ChosenIndex;
+		    
+		    SwapValue = (n - ChosenIndex - 1); //Reverse on the position from ChosenIndex to SwapValue (N - ChosenIndex - 1)
+		    
+		    int64_t Swap = 0, HalfDistance = ((SwapValue - ChosenIndex) / 2);
+            if (QueryNumber == 1)
+            {
+                for (int64_t i = 0; i < (HalfDistance + 1); ++i)
+                {
+                    //Reverse:
+                    Swap = Bdaybash[ChosenIndex + i];
+                    Bdaybash[ChosenIndex + i] = Bdaybash[SwapValue - i];
+                    Bdaybash[SwapValue - i] = Swap;
+                }
+            }
+            else if (QueryNumber == 2)
+            {
+                //ASCII Conversion:
+                Bdaybash[ChosenIndex] = (((Bdaybash[ChosenIndex] - 97) + 1) % TotalAlphabets) + 97; 
+            }
+		}
+		
+		for (int64_t i = 0; i < n; ++i)
+        {
+            std::cout << Bdaybash[i];
+        }
+        
+        std::cout << '\n';
+	}
+
+	return 0;
+}

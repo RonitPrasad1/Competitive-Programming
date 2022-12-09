@@ -1,0 +1,58 @@
+//0 Points
+
+/*
+    Competition: HackerEarth
+    Problem: Fruit Smash
+    Author: Ron Prasad
+    Date: 12-2-2022 
+*/
+
+// Header Files:
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+// Driver Function:
+auto main (int argc, const char** argv) -> decltype (0)
+{
+    // FAST IO:
+    std::ios::sync_with_stdio (NULL);
+    std::cin.tie (nullptr);
+    
+    int64_t t, n;
+    std::cin >> t;
+    
+    while (t--)
+    {
+        std::cin >> n;
+        
+        std::vector <int64_t> FruitSmash (n, 0);
+        for (int64_t i = 0; i < n; ++i)
+        {
+            int64_t Element;
+            std::cin >> Element;
+            
+            FruitSmash.push_back (Element);
+        }
+        
+        std::sort (FruitSmash.begin(), FruitSmash.end());
+        
+        int64_t Strength = FruitSmash[n];
+        
+        int64_t Counter = 0;
+        for (int64_t i = 0; i < (n - 1); ++i)
+        {
+            if (Strength >= FruitSmash[i])
+            {
+                ++Counter;
+            }
+        }
+        
+        std::cout << (Counter - 1) << '\n';
+        
+        // Clear Memory:
+        FruitSmash.clear();
+    }
+
+    return 0;
+}
