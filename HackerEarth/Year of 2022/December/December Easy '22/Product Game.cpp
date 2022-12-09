@@ -62,7 +62,7 @@ auto main (int argc, const char** argv) -> decltype (0)
         
         std::cout << (Max - Min) << '\n';
 		
-		// Clear Memory:
+		// Clearing Memory:
 		Product.clear()
 		Store.clear();
     }
