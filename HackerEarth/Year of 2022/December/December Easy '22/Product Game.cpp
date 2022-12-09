@@ -1,4 +1,4 @@
-//100 Points; no clue how because the solution shouldn't have even been accepted...?
+//100 Points; no clue how because the problem is way more complicated, but this solution still passed - HackerEarth issue
 
 /*
     Competition: HackerEarth
@@ -57,13 +57,14 @@ auto main (int argc, const char** argv) -> decltype (0)
             CapitalPhiSummation = 1;
         }
         
-        // for (auto i : Store)
-        //     std::cout << i << " ";
-        
         int64_t Max = *std::max_element(Store.begin(), Store.end());
         int64_t Min = *std::min_element(Store.begin(), Store.end());
         
         std::cout << (Max - Min) << '\n';
+		
+		// Clear Memory:
+		Product.clear()
+		Store.clear();
     }
     
     return 0;
