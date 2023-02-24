@@ -1,0 +1,71 @@
+//100 points
+
+/*
+    Competition: HackerEarth
+    Problem: MAX AND
+    Author: Ron Prasad
+    Date: 11-18-2022 
+*/
+
+// Header Files:
+#include <iostream>
+#include <array>
+#include <set>
+#include <vector>
+#include <algorithm>
+#include <cassert>
+
+// Driver Function:
+auto main (int argc, const char** argv) -> decltype (0)
+{
+    // FAST IO:
+    std::ios::sync_with_stdio (NULL);
+    std::cin.tie (nullptr);
+    
+    int64_t t, n;
+    std::cin >> t;
+    
+    assert (t >= 1 && t <= 1e5);
+
+    while (t--)
+    {
+        std::cin >> n;
+        
+        int64_t A[n], B[n];
+        std::set <int64_t> Duplicates;
+        std::vector <int64_t> Solution;
+        
+        for (int64_t i = 0; i < n; ++i)
+        {
+            std::cin >> A[i] >> B[i];
+            
+            // Insert Array A and Array B into a Set <int64_t>:
+            Duplicates.insert(A[i]);
+            Duplicates.insert(B[i]);
+        }
+        
+        // Insert Values from Set into Vector:
+        for (auto i : Duplicates)
+        {
+            Solution.push_back(i);
+        }
+        
+        // Sorting Vector of Non-duplicates:
+        std::sort(Solution.begin(), Solution.end());
+        
+        // Bitwise AND of the Entire Vector:
+        int64_t Maximum = (Solution[0]);
+        for (int64_t i = 0; i < (Solution.size()); ++i)
+        {
+            Maximum = (Maximum & Solution[i]);
+        }
+        
+        std::cout << Maximum << '\n';
+
+        // Clear Memory:
+        Duplicates.clear();
+        Solution.clear();
+    }
+    
+    return 0;
+}

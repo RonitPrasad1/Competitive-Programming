@@ -1,0 +1,46 @@
+// 100 Points
+
+// Header Files:
+#include <iostream>
+#include <vector>
+#include <map>
+ 
+// Driver Function:
+int main (int argc, const char** argv)
+{
+    // FAST IO:
+    std::ios::sync_with_stdio (NULL);
+    std::cin.tie (nullptr);
+    std::cout.tie (NULL);
+    
+    int64_t t, n;
+    std::cin >> t;
+    
+    while (t--)
+    {
+        std::cin >> n;
+        
+        std::vector <int64_t> FruitSlicing (n, 0);
+        std::map <int64_t, int64_t> mp;
+        for (int64_t i = 0; i < n; ++i)
+        {
+            std::cin >> FruitSlicing[i];
+            
+            ++mp[FruitSlicing[i]];
+        }
+        
+        // Print:
+        // for (auto i : mp)
+        // {
+        //     std::cout << (i.first) << " " << (i.second) << '\n';
+        // }
+        
+        std::cout << (mp.size()) << '\n';
+        
+        // Clear Memory:
+        FruitSlicing.clear();
+        mp.clear();
+    }
+    
+    return 0;
+}
